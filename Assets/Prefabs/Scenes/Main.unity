@@ -482,6 +482,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 543629222}
   m_CullTransparentMesh: 1
+--- !u!1 &572862846
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 572862848}
+  - component: {fileID: 572862847}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &572862847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572862846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eebc7c403a9d34bf6ac89b8e35043f21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _plantedText: {fileID: 543629224}
+  _remainingText: {fileID: 179384848}
+--- !u!4 &572862848
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572862846}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &935932057
 GameObject:
   m_ObjectHideFlags: 0
@@ -492,6 +538,7 @@ GameObject:
   m_Component:
   - component: {fileID: 935932060}
   - component: {fileID: 935932059}
+  - component: {fileID: 935932061}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -566,6 +613,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &935932061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 935932057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78692814429bd4f79a92be7f923fb9e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 1
+  _playerTransform: {fileID: 935932060}
+  _plantPrefab: {fileID: 9020316732276122452, guid: 64b9e94b3410c4349b24eb5d0d00f5cd, type: 3}
+  _numSeeds: 5
+  _plantCountUI: {fileID: 572862847}
 --- !u!1 &1167303336
 GameObject:
   m_ObjectHideFlags: 0
@@ -1015,3 +1079,4 @@ SceneRoots:
   - {fileID: 935932060}
   - {fileID: 1657858110}
   - {fileID: 1327915577}
+  - {fileID: 572862848}

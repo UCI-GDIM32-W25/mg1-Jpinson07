@@ -1,3 +1,4 @@
+using System.Threading;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -13,16 +14,47 @@ public class Player : MonoBehaviour
 
     private void Start ()
     {
-        
+        // Start with the number of seeds assigned in the Inspector
+        _numSeedsLeft = _numSeeds;
+
+        // Update UI at the beginning
+        _plantCountUI.UpdateSeeds(_numSeedsLeft, _numSeedsPlanted);
+
+
     }
 
     private void Update()
     {
-        
+        float moveX = Input.GetAxisRaw("Horizontal");
+        float moveY = Input.GetAxisRaw("Vertical");
+
+        Vector3 movement = new Vector3(moveX, moveY, 0f) * _speed * Time.deltaTime;
+        _playerTransform.position += movement;
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            PlantSeed();
+        }
+
     }
 
     public void PlantSeed ()
     {
-        
+        if(_numSeedsLeft <= 0)
+            return;
+
+       
+        Instantiate(_plantPrefab, _playerTransform.position, Quaternion.identity);
+
+       
+        _numSeedsLeft--;
+
+     
+        _numSeedsPlanted++;
+
+
+        _plantCountUI.UpdateSeeds(_numSeedsLeft, _numSeedsPlanted);
+
+
     }
 }

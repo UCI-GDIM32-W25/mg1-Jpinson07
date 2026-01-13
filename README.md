@@ -3,6 +3,11 @@
 ## Devlog
 Write your Devlog here!
 
+### Question 1
+My preferred name is Jamin and pronouns are he/him.
+
+### Question 2
+Using my plan ftom the activity I knew I had to define the methods of how to move the character and I used this by understanding I had to call a method where I get axis horizontal amnd get axis vertical to move the player. For the flower I knew I had to make a prefab to ensure the flower is properly placed so I did that and then also knowing I had to place the flower I used the method GetKeyDown(KeyCode.Space) to place the flower down properly. I also knew I had to understand that the UI text changed when I placed a seed down so I called the method to update the text to add the remaining seeds when a seed is placed and then increase the number of flowers planted when space is pressed.
 
 ## Open-Source Assets
 If you added any other outside assets, list them here!
